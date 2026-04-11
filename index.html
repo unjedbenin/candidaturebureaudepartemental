@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidature – Bureau Départemental UNJED-BÉNIN</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="image.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BANDE TRICOLORE -->    
+<div class="tricolore"><span></span><span></span><span></span></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-flag">
+    <div class="flag-stripe"></div>
+    <div class="flag-stripe"></div>
+    <div class="flag-stripe"></div>
+  </div>
+  <img src="image.png" alt=" Logo de UNJED-BÉNIN "  style="width:100px;height:100px;object-fit:contain;border-radius:50%;background:#fff;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25);margin-bottom:1rem;display:block;margin-left:auto;margin-right:auto;">
+  <div class="hero-badge"> Appel à candidatures 2026</div>
+  <h1>Candidature au Bureau Départemental <br><span>UNJED-BÉNIN</span></h1>
+  <h1>Union Nationale des Jeunes Engagés pour le Développement du Bénin</h1>
+  <p>Rejoins le réseau national de jeunes engagés pour le développement du Bénin.</p><br>
+  <p><h3><strong> DEADLINE(Fin d'inscription):</strong>Les inscriptions seront clôturées le <strong>25 Avril 2026 à 23h 59'</strong></h3></p>
+  <div class="hero-deco"></div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <div class="progress-track">
+    <div class="step-dots">
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+    </div>
+    <span class="step-label" id="step-label">Section 1 / 5</span>
+  </div>
+</div>
+
+<div class="main">
+<form id="candidature-form" action="https://api.web3forms.com/submit" method="post">
+  <input type="hidden" name="access_key" value="a7699287-6d5e-4ec0-9483-f8f56632ba90">
+  <input type="hidden" name="subject" value="Nouvelle candidature Bureau Communal UNJED-BÉNIN">
+
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div class="section-title">Identité</div>
+    </div>
+    <div class="field-grid">
+
+      <div class="field full">
+        <label>Nom &amp; Prénoms <span class="req">*</span></label>
+        <input type="text" name="nom_prenoms" placeholder="Ex : DOSSOU Kofi Armand" required>
+      </div>
+
+      <div class="field">
+        <label>Âge <span class="req">*</span></label>
+        <input type="number" name="age" min="16" max="40" placeholder="Ex : 24" required>
+      </div>
+
+      <div class="field">
+        <label>WhatsApp / Téléphone <span class="req">*</span></label>
+        <input type="tel" name="telephone" placeholder="+229 97 00 00 00" required>
+      </div>
+
+      <div class="field full">
+        <label>Adresse E-mail <span class="req">*</span></label>
+        <input type="email" name="email" placeholder="nom@exemple.com" required>
+      </div>
+
+      <!-- CASCADE RÉSIDENCE -->
+      <div class="field full">
+        <label style="margin-bottom:.6rem;display:block">Lieu de résidence <span class="req">*</span></label>
+        <div class="geo-cascade">
+          <div class="geo-group">
+            <label>Département</label>
+            <select id="res-dept" name="residence_departement" required></select>
+          </div>
+          <div class="geo-group">
+            <label>Commune</label>
+            <select id="res-comm" name="residence_commune" required disabled>
+              <option value="">-- Choisir la commune --</option>
+            </select>
+          </div>
+          <div class="geo-group" style="grid-column:1/-1">
+            <label>Arrondissement</label>
+            <input type="text" name="arrondissement" placeholder="Précisez votre arrondissement ici">
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTE + DÉPARTEMENT À COORDONNER -->
+      <div class="field full">
+        <label>Poste sollicité <span class="req">*</span></label>
+        <select name="poste" required>
+          <option value="">-- Choisir le poste --</option>
+          <option>Coordonnateur Départemental </option>
+          <option>Coordonnateur Départemental  Adjoint</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label>Département que vous souhaitez coordonner <span class="req">*</span></label>
+        <select id="coord-dept" name="departement_coordination" required>
+          <option value="">-- Choisir le Département --</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. PARCOURS -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div class="section-title">Parcours</div>
+    </div>
+    <div class="field-grid">
+
+      <div class="field full">
+        <label>Niveau d'études / Formation <span class="req">*</span></label>
+        <select name="niveau_etudes" required>
+          <option value="">-- Choisir --</option>
+          <option>BEPC / Brevet</option>
+          <option>Baccalauréat</option>
+          <option>Licence / BTS en cours</option>
+          <option>Licence / BTS obtenu</option>
+          <option>Master en cours</option>
+          <option>Master obtenu</option>
+          <option>Doctorat</option>
+          <option>Formation professionnelle</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label>Occupation actuelle <span class="req">*</span></label>
+        <input type="text" name="occupation" placeholder="Ex : Étudiant en informatique à l'UAC" required>
+      </div>
+
+      <div class="field full">
+        <label>Expérience associative (rôle, durée, actions concrètes)</label>
+        <textarea name="experience_associative" placeholder="Ex : Trésorier de l'association JEMA pendant 2 ans…"></textarea>
+      </div>
+
+      <div class="field full">
+        <label>Avez-vous déjà coordonné une équipe ou un projet ? <span class="req">*</span></label>
+        <div class="radio-group" style="margin-bottom:.5rem">
+          <label class="radio-option"><input type="radio" name="coord_experience" value="Oui" required> Oui</label>
+          <label class="radio-option"><input type="radio" name="coord_experience" value="Non"> Non</label>
+        </div>
+        <textarea name="coord_resume" placeholder="Si oui, résumez en 2-3 lignes…" style="min-height:70px"></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. MOTIVATION -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div class="section-title">Motivation</div>
+    </div>
+    <div class="field-grid">
+
+      <div class="field full">
+        <label>Pourquoi ce rôle dans l'UNJED-BÉNIN ? <span class="req">*</span></label>
+        <textarea name="motivation" placeholder="Exprimez votre motivation de façon sincère et concrète…" required></textarea>
+      </div>
+
+      <div class="field full">
+        <label>Un besoin local que vous voulez adresser <span class="req">*</span></label>
+        <input type="text" name="besoin_local" placeholder="Ex : Formation professionnelle des jeunes déscolarisés" required>
+      </div>
+
+      <div class="field full">
+        <label>Disponibilité hebdomadaire estimée <span class="req">*</span></label>
+        <select name="disponibilite" required>
+          <option value="">-- Choisir --</option>
+          <option>Moins de 3h / JOUR</option>
+          <option>3h à 6h / JOUR</option>
+          <option>6h à 10h / JOUR</option>
+          <option>Plus de 10h / JOUR</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. VISION & MÉTHODE -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div class="section-title">Vision &amp; Méthode</div>
+    </div>
+    <div class="field-grid">
+
+      <div class="field full">
+        <label>Première action que vous lanceriez dans votre commune <span class="req">*</span></label>
+        <textarea name="premiere_action" placeholder="Décrivez une action concrète et réalisable dans les 3 premiers mois…" required></textarea>
+      </div>
+
+      <div class="field full">
+        <label>Comment tenez-vous les membres informés ? (outil / fréquence) <span class="req">*</span></label>
+        <textarea name="communication" placeholder="Ex : Groupe WhatsApp + réunion mensuelle + rapport trimestriel…" required></textarea>
+      </div>
+
+      <div class="field full">
+        <label>Gestion des conflits / désaccords – bref exemple <span class="req">*</span></label>
+        <textarea name="gestion_conflits" placeholder="Décrivez une situation réelle ou hypothétique et votre approche…" required></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. ENGAGEMENT & PIÈCES JOINTES -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div class="section-title">Engagement &amp; Pièces jointes</div>
+    </div>
+
+    <div class="clause-box">
+      En soumettant ce formulaire, le candidat s'engage à respecter les statuts et règlements
+      intérieurs de l'UNJED-BÉNIN, à exercer son mandat avec intégrité et transparence,
+      et accepte les <strong>sanctions prévues</strong> en cas de manquement grave.
+      Les informations sont strictement confidentielles et utilisées à des fins de sélection uniquement.
+    </div>
+
+    <div class="field" style="margin-bottom:1.2rem">
+      <label class="checkbox-row">
+        <input type="checkbox" id="check-clause" name="accepte_clause" value="Oui" required>
+        <span>J'ai lu et j'accepte la clause de confidentialité et les sanctions prévues. <span class="req">*</span></span>
+      </label>
+    </div>
+
+    <div class="field-grid">
+      <div class="field full">
+  <label>📲 Envoi des pièces via WhatsApp <span class="req">*</span></label>
+
+  <div class="whatsapp-box">
+    <p>
+      Veuillez envoyer les documents suivants sur WhatsApp :
+    </p>
+
+    <ul>
+      <li>Copie CIP</li>
+      <li>CV</li>
+      <li>Lettre de motivation</li>
+    </ul>
+
+    <a href="https://wa.me/2290163280409?text=Bonjour,%20je%20souhaite%20envoyer%20mon%20dossier%20de%20candidature%20UNJED" target="_blank">
+      <button type="button" class="whatsapp-btn">
+        📲 Envoyer mes documents sur WhatsApp
+      </button>
+    </a><br><br>
+    <p><strong>NB:</strong> Rassurez vous que vous avez toutes vos pièces demandées en cliquant sur le bouton ci-dessus.</p><br>
+     <p> Un dossier incomplet sera rejeté automatiquement.</p><br><br>
+
+    <label class="checkbox-row" style="margin-top:15px;">
+      <input type="checkbox" id="confirm-whatsapp" required>
+      <span>J’ai envoyé tous les documents via WhatsApp</span>
+    </label>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-wrap">
+    <button type="submit" class="btn-submit"> Soumettre ma candidature</button>
+    <p class="btn-note">Vous recevrez un email de confirmation après soumission.</p>
+  </div>
+
+</form>
+
+<!-- SUCCÈS -->
+<div class="success-screen" id="success-screen">
+  <div class="success-icon">✅</div>
+  <h2>Candidature soumise !</h2>
+  <p>Merci pour votre engagement envers la jeunesse béninoise.<br>
+  Votre dossier a bien été reçu. L'équipe UNJED-BÉNIN vous contactera dans les meilleurs délais.</p>
+  <br>
+  <p style="font-size:.8rem;color:#aaa">🇧🇯 Ensemble pour un Bénin prospère</p>
+</div>
+</div>
+
+<footer>
+  <div class="tricolore"><span></span><span></span><span></span></div>
+  <strong>UNJED-BÉNIN © 2026 — Union Nationale de la Jeunesse pour le Développement du Benin</strong>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+
+<!-- Scripts : données géo d'abord, puis logique -->
+<script src="benin-geo.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
