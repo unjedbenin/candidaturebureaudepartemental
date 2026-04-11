@@ -23,7 +23,7 @@ resDept.addEventListener('change', () => {
 });
 
 // ── DEPARTEMENT À COORDONNER ──────────────────
-fillSelect(document.getElementById('coord-dept'), Object.keys(GEO).sort(), '-- Choisir le Départemental  --');
+fillSelect(document.getElementById('coord-dept'), Object.keys(GEO).sort(), '-- Choisir le Département  --');
 
 // ── APERÇU FICHIER ────────────────────────────
 function showFile(input, previewId) {
